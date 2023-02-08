@@ -1,4 +1,4 @@
-<h2>Lista cani</h2>
+<h2>Lista Recensioni</h2>
 <table>
   <thead>
     <tr>
@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let l of listaReview">
+    <tr *ngFor="let l of listaReview$ | async">
       <td>
         {{ l.title }}
       </td>
