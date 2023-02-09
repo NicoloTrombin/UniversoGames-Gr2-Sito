@@ -1,6 +1,6 @@
 .main{
     display:flex;
-    height: 100vh;
+    margin-top: 7rem;
 }
 .container{
     margin: auto;
