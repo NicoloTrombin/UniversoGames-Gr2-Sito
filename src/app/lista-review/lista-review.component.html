@@ -1,0 +1,31 @@
+<h2>Lista Recensioni</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Titolo</th>
+      <th>Autore recensione</th>
+      <th>Data di pubblicazione</th>
+      <th>Valutazione</th>
+      <th>Opzioni</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let l of listaReview$ | async">
+      <td>
+        {{ l.title }}
+      </td>
+      <td>
+        {{ l.reviewerName }}
+      </td>
+      <td>
+        {{ l.publicationDate }}
+      </td>
+      <td>
+        {{ l.score }}
+      </td>
+      <td>
+        <button>Dettaglio</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
