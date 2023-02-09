@@ -5,6 +5,7 @@
   grid-template-columns: repeat(auto-fit, minmax(170px, auto));
   gap: 1rem;
   background-color: black;
+  margin-top: 2rem;
 }
 
 .footer-box {
@@ -50,35 +51,17 @@
 
 @media(max-width: 645px) {
   .footer {
-      grid-template-columns: repeat(auto-fit, minmax(100px, auto));
-  }
-
-  .nsButton {
-      padding: 10px 16px;
-      font-size: .9rem;
-      font-weight: 500;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .gallery{
-      display: none;
-    }
-  
-    .newSeason{
+      grid-template-columns: repeat(1, 1fr);
+      display: flex;
       flex-direction: column;
-    }
-  
-    .nsItem:nth-child(2){
-      padding: 50px;
-    }
-
-    .nsButton {
-      padding: 8px 14px;
-      font-size: .9rem;
-      font-weight: 500;
+      align-items: center;
+      justify-content: center;
   }
 
+  .social .bx {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .logo{
