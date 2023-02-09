@@ -1,31 +1,22 @@
-<h2>Lista Recensioni</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Titolo</th>
-      <th>Autore recensione</th>
-      <th>Data di pubblicazione</th>
-      <th>Valutazione</th>
-      <th>Opzioni</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let l of listaReview$ | async">
-      <td>
-        {{ l.title }}
-      </td>
-      <td>
-        {{ l.reviewerName }}
-      </td>
-      <td>
-        {{ l.publicationDate }}
-      </td>
-      <td>
-        {{ l.score }}
-      </td>
-      <td>
-        <button>Dettaglio</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<body>
+  <main class="main">
+      <section class="container">
+          <div class="title">
+              <h2> Our reviews</h2>
+              <div class="underline"></div>
+
+          </div>
+          <article class="review" *ngFor="let l of listaReview$ | async">
+              <div class="imagecontainer">
+                  <img src="{{ l.imageUrls }}" id="person-img" alt="photo" height="70px" width="70px">
+              </div>
+              <h4 id="title">{{ l.title }}</h4>
+              <p id="name">{{ l.reviewerName }}</p>
+              <p id="date">{{ l.publicationDate }}</p>
+              <p id="info">{{ l.content }}</p>
+              <p id="score">Score: {{ l.score }}/5</p>
+              <button routerLink="/" class="random-btn">Scopri di più!</button>
+          </article>
+      </section>
+  </main>  
+</body>
