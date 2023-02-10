@@ -1,3 +1,4 @@
+<!-- Latest News -->
 <div class="wrapper">
     <div class="home-hero" *ngIf="(listaNew$ | async) as list">
       <div class="feature" [ngStyle]="{'background-image': 'url(' + list[0].imageUrl + ')'}">
@@ -27,4 +28,38 @@
         <p>{{ list[5].authorName }}</p>
       </div>
     </div>
+</div>
+
+<!-- Cards  -->
+<div class="cards" style="margin-top: 10rem;">
+  <div class="card">
+    <header>
+      <h2>Titolo</h2>
+    </header>
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/harbour1.jpg" alt="Bristol harbour">
+    <div class="body">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, qui.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, in.</p>
+    </div>
+  </div>
+  
+  <div class="card">
+    <header>
+      <h2>Titolo</h2>
+    </header>
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/harbour2.jpg" alt="Bristol harbour">
+    <div class="body">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, distinctio!</p>
+    </div>
+  </div>
+  
+  <div class="card">
+    <header>
+      <h2>Titolo</h2>
+    </header>
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/coloured-balloon.jpg" alt="Coloured balloon">
+    <div class="body">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, magnam?</p>
+    </div>
+  </div>
 </div>
