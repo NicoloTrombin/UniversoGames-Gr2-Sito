@@ -9,6 +9,7 @@ import { ListaReviewComponent } from './lista-review/lista-review.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { ListaNewsComponent } from './lista-news/lista-news.component';
+import { ListaVideogiochiComponent } from './lista-videogiochi/lista-videogiochi.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ListaNewsComponent } from './lista-news/lista-news.component';
     ListaReviewComponent,
     HeaderComponent,
     ListaNewsComponent,
+    ListaVideogiochiComponent,
   ],
   imports: [
     BrowserModule,
