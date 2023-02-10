@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ListaReviewComponent } from './lista-review/lista-review.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
+import { ListaNewsComponent } from './lista-news/lista-news.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
     FooterComponent,
     ListaReviewComponent,
     HeaderComponent,
+    ListaNewsComponent,
   ],
   imports: [
     BrowserModule,
