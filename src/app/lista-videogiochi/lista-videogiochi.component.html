@@ -35,9 +35,14 @@
       <td>
         {{ v.numberOfPlayers }}
       </td>
-      <td>
-        {{ v.languages }}
-      </td>
+      <!--<td *ngFor="let l of v.languages">
+        <div *ngFor="let v of l.voice">
+          {{ v }}
+        </div>
+        <div *ngFor="let v of l.text">
+          {{ v }}
+        </div>
+      </td>-->
       <td>
         <button>Dettaglio</button>
       </td>
