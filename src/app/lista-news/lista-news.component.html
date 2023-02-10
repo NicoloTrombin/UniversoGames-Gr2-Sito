@@ -1,1 +1,30 @@
-<p>lista-news works!</p>
+<div class="wrapper">
+    <div class="home-hero" *ngIf="(listaNew$ | async) as list">
+      <div class="feature" [ngStyle]="{'background-image': 'url(' + list[0].imageUrl + ')'}">
+        <h3>{{ list[0].title }}</h3>
+        <p>{{ list[0].authorName }}</p>
+      </div>
+      <div class="special" [ngStyle]="{'background-image': 'url(' + list[1].imageUrl + ')'}">
+        <h3>{{ list[1].title }}</h3>
+        <p>{{ list[1].authorName }}</p>
+      </div>
+
+      <div class="amazing" [ngStyle]="{'background-image': 'url(' + list[2].imageUrl + ')'}">
+        <h3>{{ list[2].title }}</h3>
+        <p>{{ list[2].authorName }}</p>
+      </div>
+      <div class="news" [ngStyle]="{'background-image': 'url(' + list[3].imageUrl + ')'}">
+        <h3>{{ list[3].title }}</h3>
+        <p>{{ list[3].authorName }}</p>
+      </div>
+
+      <div class="photos" [ngStyle]="{'background-image': 'url(' + list[4].imageUrl + ')'}">
+        <h3>{{ list[4].title }}</h3>
+        <p>{{ list[4].authorName }}</p>
+      </div>
+      <div class="cta" [ngStyle]="{'background-image': 'url(' + list[5].imageUrl + ')'}">
+        <h3>{{ list[5].title }}</h3>
+        <p>{{ list[5].authorName }}</p>
+      </div>
+    </div>
+</div>
