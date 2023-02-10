@@ -9,6 +9,7 @@ export interface Videogioco {
     publisher: string;
     numberOfPlayers: number;
     languages: Linguaggio[];
+    coverImage: string;
 }
 
 export interface Linguaggio{
