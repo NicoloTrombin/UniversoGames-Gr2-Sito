@@ -1,6 +1,6 @@
 /*news*/
 
-export interface news{
+export interface New {
     id: string;
     title: string;
     category: string;
