@@ -14,7 +14,7 @@ const routes: Routes = [
     component: ListaReviewComponent
   },
   {
-    path: 'videogiochi',
+    path: 'catalogo',
     component: ListaVideogiochiComponent
   }
 ];

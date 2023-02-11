@@ -17,5 +17,6 @@ export class ListaVideogiochiComponent {
 
   ngOnInit(): void {
     this.listaVideogiochi$ = this.videogiochiService.getVideogiochi();
+    console.log(this.listaVideogiochi$);
   }
 }
