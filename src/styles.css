@@ -3,7 +3,14 @@
     padding: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
-    list-style: none;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-image: url(https://images8.alphacoders.com/110/thumb-1920-1102284.jpg);
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
