@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { ListaNewsComponent } from './lista-news/lista-news.component';
 import { ListaVideogiochiComponent } from './lista-videogiochi/lista-videogiochi.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DettaglioVideogiocoComponent } from './dettaglio-videogioco/dettaglio-videogioco.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     ListaNewsComponent,
     ListaVideogiochiComponent,
+    DettaglioVideogiocoComponent,
   ],
   imports: [
     BrowserModule,

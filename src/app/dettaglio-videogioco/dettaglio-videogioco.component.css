@@ -1,0 +1,15 @@
+.title{
+    font-size: 60px;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.game{
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+    position: relative;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}

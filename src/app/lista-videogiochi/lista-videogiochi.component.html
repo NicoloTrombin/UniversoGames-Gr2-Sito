@@ -7,10 +7,10 @@
 </head>
 
 <body>
-  <main class="main">
+  <main class="main" >
     <section *ngFor="let v of listaVideogiochi$ | async" class="card">
       <figure class="figure">
-        <img class="image" src="{{ v.coverImage }}" alt="">
+        <img class="image" src="{{ v.coverImage }}" alt="" [routerLink]= "['/dettaglio', v._id]">
       </figure>
       <div class="description">
         <div class="my-bg-color"></div>
