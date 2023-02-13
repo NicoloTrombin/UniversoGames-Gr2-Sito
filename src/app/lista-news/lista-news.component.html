@@ -30,6 +30,29 @@
     </div>
 </div>
 
+<!-- Category News -->
+<section id="category-news">
+  <h2 class="section-header">
+    <a href="#">
+      Notizie Recenti
+    </a>
+  </h2>
+  <div class="latest-news-container">
+    <article class="latest-news-item" *ngFor="let lN of (listaNew$ | async)!.slice(6).reverse() as listNews">
+      <img src="{{ lN.imageUrl }}" alt="Games Image">
+      <h4>
+        <a href="#">
+        {{ lN.title }}
+        </a>
+      </h4>
+      <div class="writer">
+        <a href="#">{{ lN.authorName }}</a>
+        <span> . 52 secondi fa</span>
+      </div>
+    </article>
+  </div>
+</section>
+
 <!-- Cards  -->
 <div class="cards" style="margin-top: 10rem;">
   <div class="card">
