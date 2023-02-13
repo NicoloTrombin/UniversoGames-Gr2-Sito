@@ -101,6 +101,8 @@ body{
     transition: all .5s ease-in-out;
 }
 */
+
+*/
 :root {
     box-sizing: border-box;
   }
@@ -160,8 +162,7 @@ body{
     font-family: "Nunito", sans-serif;
     margin: 100px;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
+    
     background: var(--color-bg-1);
     color: var(--color-text-1);
     font-weight: 300;
@@ -210,6 +211,15 @@ body{
     padding: 1.2rem;
     font-size: 19px;
   }
+
+  .my-bg-color {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #545a72;
+    z-index: -1;
+    opacity: 0.7;
+}
   
   button {
     border: none;
@@ -223,14 +233,14 @@ body{
   
   .main {
     width: 100%;
-    height: 100%;
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
     margin-top: 1rem;
-    display: grid;
+    flex-wrap: wrap;
     gap: 10rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
@@ -242,6 +252,7 @@ body{
     box-shadow: var(--box-shadow-1);
     border-radius: var(--border-radius-1);
     transition: all var(--transition-time-1) var(--transition-ease-1);
+    color: white;
   }
   
   .card:hover {
@@ -283,13 +294,13 @@ body{
     overflow: hidden;
   }
   
-  .back_image {
+  /*.back_image {
     border-top-left-radius: var(--border-radius-1);
     border-top-right-radius: var(--border-radius-1);
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+  }*/
   
   .back_figcaption {
     position: absolute;
