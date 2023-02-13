@@ -5,7 +5,6 @@
   grid-template-columns: repeat(auto-fit, minmax(170px, auto));
   gap: 1rem;
   background-color: black;
-  margin-top: 2rem;
 }
 
 .footer-box {
@@ -36,16 +35,18 @@
   color:  #2156d2;
   padding: 10px;
   border-radius: .5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .social .bx:hover {
-  background: hsl(252, 31%, 29%);
+  background: #2156d2;
+  color: #fafafa;
 }
 
 .copyright {
   text-align: center;
   padding: 20px;
+  color: #fafafa;
 }
 
 
@@ -59,7 +60,6 @@
   }
 
   .social .bx {
-    font-size: 1.2rem;
     margin-bottom: 1rem;
   }
 }

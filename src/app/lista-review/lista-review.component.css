@@ -1,12 +1,13 @@
 .main{
     display:flex;
-    margin-top: 7rem;
+    margin-top: 4.5rem;
 }
 .container{
     margin: auto;
     height: 60%;
     width: 50%;
     text-align: center;
+    margin-top: 2rem;
 }
 .review{
     background-color: white;

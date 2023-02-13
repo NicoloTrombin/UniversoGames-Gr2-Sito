@@ -1,31 +1,31 @@
 <!-- Latest News -->
 <div class="wrapper">
-    <div class="home-hero" *ngIf="(listaNew$ | async) as list">
-      <div class="feature" [ngStyle]="{'background-image': 'url(' + list[0].imageUrl + ')'}">
-        <h3>{{ list[0].title }}</h3>
-        <p>{{ list[0].authorName }}</p>
+    <div class="home-hero" *ngIf="(listaNew$ | async) as listN">
+      <div class="feature" id="hover" [ngStyle]="{'background-image': 'url(' + listN[0].imageUrl + ')'}">
+        <h3>{{ listN[0].title }}</h3>
+        <p>{{ listN[0].authorName }}</p>
       </div>
-      <div class="special" [ngStyle]="{'background-image': 'url(' + list[1].imageUrl + ')'}">
-        <h3>{{ list[1].title }}</h3>
-        <p>{{ list[1].authorName }}</p>
-      </div>
-
-      <div class="amazing" [ngStyle]="{'background-image': 'url(' + list[2].imageUrl + ')'}">
-        <h3>{{ list[2].title }}</h3>
-        <p>{{ list[2].authorName }}</p>
-      </div>
-      <div class="news" [ngStyle]="{'background-image': 'url(' + list[3].imageUrl + ')'}">
-        <h3>{{ list[3].title }}</h3>
-        <p>{{ list[3].authorName }}</p>
+      <div class="special" id="hover" [ngStyle]="{'background-image': 'url(' + listN[1].imageUrl + ')'}">
+        <h3>{{ listN[1].title }}</h3>
+        <p>{{ listN[1].authorName }}</p>
       </div>
 
-      <div class="photos" [ngStyle]="{'background-image': 'url(' + list[4].imageUrl + ')'}">
-        <h3>{{ list[4].title }}</h3>
-        <p>{{ list[4].authorName }}</p>
+      <div class="amazing" id="hover" [ngStyle]="{'background-image': 'url(' + listN[2].imageUrl + ')'}">
+        <h3>{{ listN[2].title }}</h3>
+        <p>{{ listN[2].authorName }}</p>
       </div>
-      <div class="cta" [ngStyle]="{'background-image': 'url(' + list[5].imageUrl + ')'}">
-        <h3>{{ list[5].title }}</h3>
-        <p>{{ list[5].authorName }}</p>
+      <div class="news" id="hover" [ngStyle]="{'background-image': 'url(' + listN[3].imageUrl + ')'}">
+        <h3>{{ listN[3].title }}</h3>
+        <p>{{ listN[3].authorName }}</p>
+      </div>
+
+      <div class="photos" id="hover" [ngStyle]="{'background-image': 'url(' + listN[4].imageUrl + ')'}">
+        <h3>{{ listN[4].title }}</h3>
+        <p>{{ listN[4].authorName }}</p>
+      </div>
+      <div class="cta" id="hover" [ngStyle]="{'background-image': 'url(' + listN[5].imageUrl + ')'}">
+        <h3>{{ listN[5].title }}</h3>
+        <p>{{ listN[5].authorName }}</p>
       </div>
     </div>
 </div>
@@ -34,32 +34,75 @@
 <div class="cards" style="margin-top: 10rem;">
   <div class="card">
     <header>
-      <h2>Titolo</h2>
+      <h2>Xbox Game Pass</h2>
     </header>
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/harbour1.jpg" alt="Bristol harbour">
+    <img src="https://sm.ign.com/ign_es/tag/x/xbox-game-/xbox-game-pass_3tbz.png" alt="Xbox Pass">
     <div class="body">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, qui.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, in.</p>
+    <p>Vi state godendo <strong style="color: lightblue;">i primi giochi di febbraio per Xbox Game Pass?.</strong> </p> <br>
+    <p>Tra Darkest Dungeon, Hot Wheels Unleashed, Madden NFL 23 e SD Gundam Battle Alliance avete letteralmente l'imbarazzo della scelta,</p>
+    <p>mentre per la settimana prossima ci sono già quattro giochi confermati, tra cui Atomic Heart. <strong>Febbraio, tuttavia, promette anche altre sorprese.</strong> </p>
     </div>
   </div>
   
   <div class="card">
     <header>
-      <h2>Titolo</h2>
+      <h2>Playstation Plus Extra</h2>
     </header>
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/harbour2.jpg" alt="Bristol harbour">
+    <img src="https://wallpaperaccess.com/full/4108404.jpg" alt="PS Plus">
     <div class="body">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, distinctio!</p>
+      <p>I nuovi giochi PlayStation Plus Premium ed Extra di febbraio verranno annunciati <strong>mercoledì 15 febbraio alle 17:30</strong>  ora italiana.</p>
+      <p>I giochi saranno poi disponibili dal 21 febbraio.</p> <br>
+      <p>Secondo alcuni rumor, <strong style="color: lightblue;">Syphon Filter Dark Mirror arriverà presto su PlayStation Plus Premium.</strong> </p>
     </div>
   </div>
   
   <div class="card">
     <header>
-      <h2>Titolo</h2>
+      <h2>Nintendo Switch</h2>
     </header>
-    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/coloured-balloon.jpg" alt="Coloured balloon">
+    <img src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2017/01/Nintendo-Switch.jpg?fit=1920%2C1085&ssl=1" alt="Nintendo Switch Logo">
     <div class="body">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, magnam?</p>
+      <p>Quando escono e quali sono <strong>i nuovi giochi per Game Boy e GBA?</strong> </p> <br>
+      <p>Sebbene il programma di lancio sia ancora sconosciuto, conosciamo già i nomi di alcuni giochi che verranno aggiunti in futuro. Nintendo ha infatti già confermato:</p> <br>
+      <li><strong>The Legend of Zelda:</strong> Oracle of Ages & Pokemon Trading Card per Game Boy;</li>
+      <li><strong style="color: lightblue;">Metroid Fusion, Kirby and the Amazing Mirror, Fire Emblem</strong>, per Game Boy Advance.</li>
+      
     </div>
   </div>
 </div>
+
+<!-- Recent Games -->
+<section id="recent-games">
+  <h1>Giochi Recenti</h1>
+  <div class="flex" *ngIf="(listaVideogiochi$ | async) as listV">
+      <div class="box">
+          <span class="badge new">{{ listV[2].genre }}</span>
+          <img src="{{ listV[2].coverImage }}" />
+          <div class="box-lower-section">
+              <h4>{{ listV[2].title }}</h4>
+              <p>{{ listV[2].softwareHouse }} - {{ listV[2].category }}</p>
+              <a href="#" class="comments">7 Commenti</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <span class="badge racing">{{ listV[3].genre }}</span>
+          <img src="{{ listV[3].coverImage }}" />
+          <div class="box-lower-section">
+              <h4>{{ listV[3].title }}</h4>
+              <p>{{ listV[3].softwareHouse }} - {{ listV[3].category }}</p>
+              <a href="#" class="comments">3 Commenti</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <span class="badge adventure">{{ listV[1].genre }}</span>
+          <img src="{{ listV[1].coverImage }}" />
+          <div class="box-lower-section">
+              <h4>{{ listV[1].title }}</h4>
+              <p>{{ listV[1].softwareHouse }} - {{ listV[1].category }}</p>
+              <a href="#" class="comments">12 Commenti</a>
+          </div>
+      </div>
+  </div>
+</section>
