@@ -1,29 +1,35 @@
 <!-- Latest News -->
 <div class="wrapper">
     <div class="home-hero" *ngIf="(listaNew$ | async) as listN">
-      <div class="feature" id="hover" [ngStyle]="{'background-image': 'url(' + listN[0].imageUrl + ')'}">
+      <div class="feature" id="hover" [ngStyle]="{'background-image': 'url(' + listN[0].imageUrl + ')'}"
+            [routerLink]="['dettaglio-news', listN[0]._id]">
         <h3>{{ listN[0].title }}</h3>
         <p>{{ listN[0].authorName }}</p>
       </div>
-      <div class="special" id="hover" [ngStyle]="{'background-image': 'url(' + listN[1].imageUrl + ')'}">
+      <div class="special" id="hover" [ngStyle]="{'background-image': 'url(' + listN[1].imageUrl + ')'}"
+           [routerLink]="['dettaglio-news', listN[1]._id]">
         <h3>{{ listN[1].title }}</h3>
         <p>{{ listN[1].authorName }}</p>
       </div>
 
-      <div class="amazing" id="hover" [ngStyle]="{'background-image': 'url(' + listN[2].imageUrl + ')'}">
+      <div class="amazing" id="hover" [ngStyle]="{'background-image': 'url(' + listN[2].imageUrl + ')'}"
+           [routerLink]="['dettaglio-news', listN[2]._id]">
         <h3>{{ listN[2].title }}</h3>
         <p>{{ listN[2].authorName }}</p>
       </div>
-      <div class="news" id="hover" [ngStyle]="{'background-image': 'url(' + listN[3].imageUrl + ')'}">
+      <div class="news" id="hover" [ngStyle]="{'background-image': 'url(' + listN[3].imageUrl + ')'}"
+           [routerLink]="['dettaglio-news', listN[3]._id]">
         <h3>{{ listN[3].title }}</h3>
         <p>{{ listN[3].authorName }}</p>
       </div>
 
-      <div class="photos" id="hover" [ngStyle]="{'background-image': 'url(' + listN[4].imageUrl + ')'}">
+      <div class="photos" id="hover" [ngStyle]="{'background-image': 'url(' + listN[4].imageUrl + ')'}"
+           [routerLink]="['dettaglio-news', listN[4]._id]">
         <h3>{{ listN[4].title }}</h3>
         <p>{{ listN[4].authorName }}</p>
       </div>
-      <div class="cta" id="hover" [ngStyle]="{'background-image': 'url(' + listN[5].imageUrl + ')'}">
+      <div class="cta" id="hover" [ngStyle]="{'background-image': 'url(' + listN[5].imageUrl + ')'}"
+           [routerLink]="['dettaglio-news', listN[5]._id]">
         <h3>{{ listN[5].title }}</h3>
         <p>{{ listN[5].authorName }}</p>
       </div>
@@ -38,10 +44,11 @@
     </a>
   </h2>
   <div class="latest-news-container">
-    <article class="latest-news-item" *ngFor="let lN of (listaNew$ | async)!.slice(6).reverse() as listNews">
+    <article class="latest-news-item" *ngFor="let lN of (listaNew$ | async)!.slice(6).reverse() as listNews"
+             [routerLink]="['dettaglio-news', lN._id]">
       <img src="{{ lN.imageUrl }}" alt="Games Image">
       <h4>
-        <a href="#">
+        <a>
         {{ lN.title }}
         </a>
       </h4>
