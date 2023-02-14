@@ -1,0 +1,21 @@
+<article *ngIf="(listaNew$ | async) as listN">
+    <div class="news-header">
+      <h1>{{ listN.title }}</h1>
+      <figure>
+      <img src="{{ listN.imageUrl }}" alt="New-Image" />
+      </figure>
+      <!-- <figcaption>A newsworthy pug wears a blanket for maximum coziness.</figcaption> -->
+    </div>
+    <div class="content">
+      <!-- <div class="outside"></div> -->
+      <div class="news-details">
+          <span class="byline" >By <a>{{ listN.authorName }}</a></span>
+          <time datetime="2018-08-14 10:00">{{ listN.publicationDate }}</time>
+          <span class="dateline">#{{ listN.tags }}</span>
+        </div>
+    
+        <div class="news-content">
+          <p>{{ listN.content }}</p>
+        </div>
+    </div>
+</article>
