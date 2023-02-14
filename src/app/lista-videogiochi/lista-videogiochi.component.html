@@ -1,25 +1,5 @@
-<!--<div class="container">
-  <div class="wrapper">
-    <div *ngFor="let v of listaVideogiochi$ | async" class="card">
-        <img src="">
-        <div class="descriptions" >
-            <h1>{{ v.title }}</h1>
-            <p>
-                Desc.gioco
-            </p>
-            <button>
-                <i class="fab fa-youtube"></i>
-                Scopri di più
-            </button>
-        </div>
-    </div>
-
-  </div> 
-</div>-->
-
 <div>
   <html lang="it" data-theme="light">
-
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./lista-videogiochi.component.css">
@@ -29,13 +9,17 @@
   <main class="main">
     <section *ngFor="let v of listaVideogiochi$ | async" class="card">
       <figure class="figure">
-        <img class="image" src="{{ v.coverImage }}" alt="">
+        <img class="image" src="{{ v.coverImage }}" alt="coverImage">
       </figure>
       <div class="description">
-        <figure class="back_figure">
-          <img src="https://4.bp.blogspot.com/-B9Xiu6axH0U/T89d4e_HDPI/AAAAAAAAJFg/qbDlBqOW_qM/s1600/Abstract+4.jpg" alt="" class="back_image">
-          <figcaption class="back_figcaption"></figcaption>
-        </figure>
+        <div class="my-bg-color"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="details_container">
           <h5 class="card_title">
             {{ v.title }}
@@ -51,16 +35,16 @@
             </figure>
             <figure class="detail">
               <img class="star_image" src="https://raw.githubusercontent.com/NaveenPantra/card_ui_interaction/master/multiplayer.png" alt="">
-              <figcaption class="detail_text">Multiplayer: <br> fino a {{ v.numberOfPlayers }} giocatore/i</figcaption>
+              <figcaption class="detail_text">Fino a {{ v.numberOfPlayers }} giocatore/i</figcaption>
             </figure>
-
           </div>
         </div>
-        <div class="play_info">
+
+        <!-- <div class="play_info">
           <p>Piattaforma: {{ v.category }}</p>
           <p>Publisher: {{ v.publisher }}</p>
           <p>Svilupppato da {{ v.softwareHouse }}</p>
-        </div>
+        </div> -->
       </div>
     </section>
   </main>

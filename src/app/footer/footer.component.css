@@ -5,6 +5,8 @@
   grid-template-columns: repeat(auto-fit, minmax(170px, auto));
   gap: 1rem;
   background-color: black;
+  z-index: 5;
+  position: relative;
 }
 
 .footer-box {
