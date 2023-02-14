@@ -4,15 +4,16 @@
       <figure>
       <img src="{{ listN.imageUrl }}" alt="New-Image" />
       </figure>
-      <!-- <figcaption>A newsworthy pug wears a blanket for maximum coziness.</figcaption> -->
+      <figcaption>{{ listN.tags }}</figcaption>
     </div>
     <div class="content">
       <!-- <div class="outside"></div> -->
       <div class="news-details">
-          <span class="byline" >By <a>{{ listN.authorName }}</a></span>
-          <time datetime="2018-08-14 10:00">{{ listN.publicationDate }}</time>
-          <span class="dateline">#{{ listN.tags }}</span>
-        </div>
+          <span class="byline" >Di 
+          <a>{{ listN.authorName }}</a></span>
+          <time>{{ listN.publicationDate }}</time>
+          <!-- <span class="tags">{{ listN.tags }}</span> -->
+      </div>
     
         <div class="news-content">
           <p>{{ listN.content }}</p>

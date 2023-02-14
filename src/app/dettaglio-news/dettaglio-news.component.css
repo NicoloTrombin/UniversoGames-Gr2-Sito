@@ -22,6 +22,7 @@ figure img{
   }
   
   .news-header figcaption {
+    letter-spacing: .2rem;
     color: #fff;
     font-size: 0.75em;
     margin: 0;
@@ -47,12 +48,11 @@ figure img{
   
   
   p {
-    line-height: 1.4;
-    line-height: 1.5rem;
+    line-height: 2.5;
   }
 
   .content {
-    line-height: 5rem;
+    line-height: 2;
     padding: 5px 25px 5px 25px;
     background-color: #fafafa;
   }
