@@ -21,7 +21,7 @@
               <p id="name">{{ l.reviewerName }}</p>
               <p id="date">{{ l.publicationDate }}</p>
               <p id="info">{{ l.content }}</p>
-              <button routerLink="/" class="random-btn">Scopri di più!</button>
+              <button  [routerLink]="['/dettaglio', l.reviewedGame.id]" class="random-btn">Scopri di più!</button>
           </article>
       </section>
   </main>  

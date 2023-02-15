@@ -13,6 +13,7 @@ import { ListaVideogiochiComponent } from './lista-videogiochi/lista-videogiochi
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DettaglioVideogiocoComponent } from './dettaglio-videogioco/dettaglio-videogioco.component';
 import { DettaglioNewsComponent } from './dettaglio-news/dettaglio-news.component';
+import { ListAllNewsComponent } from './list-all-news/list-all-news.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { DettaglioNewsComponent } from './dettaglio-news/dettaglio-news.componen
     ListaVideogiochiComponent,
     DettaglioVideogiocoComponent,
     DettaglioNewsComponent,
+    ListAllNewsComponent,
   ],
   imports: [
     BrowserModule,
