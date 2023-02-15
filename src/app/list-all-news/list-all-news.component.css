@@ -1,6 +1,23 @@
+h3 {
+    margin: 0;
+}
+
+h3+p {
+    margin-top: 0;  
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+
 #category-news {
-    background-color: #fafafa;
-    margin-top: 10rem;
+    background-color: #fff;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
 } 
 
 .category-header {
@@ -120,6 +137,14 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 0 10px;
     gap: 30px;
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+
+.latest-news-container img{
+    width: 300px;
+    height: 190px;
+    object-fit: cover;
 }
 
 .latest-news-container img:hover{
@@ -137,24 +162,45 @@
     color: rgb(231, 47, 47);
 }
 
-.other-news {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/*** Media Queries ***/
+@media only screen and (max-width: 1020px) {
+    .latest-news-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        gap: 30px;
+    }
 }
 
- .other-news #other-news-button {
-    margin: 10px;
-    padding: 4px 14px;
-    border-radius: 6px;
-    border: none;
-    color: #fff;
-    background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
-    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+@media (max-width: 800px) {
+    .latest-news-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+      }
+    
+      .latest-news-item {
+        margin: 10px;
+      }
+    
+      .latest-news-item img {
+        float: left;
+        height: 70px;
+        width: 100px;
+        margin-right: 20px;
+      }
+
+      .category-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .category-btn {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-.other-news #other-news-button:hover {
-    border: none;
-    color: #fff;
-    background: linear-gradient(180deg, #6a9ff0 0%, #5b90f4 100%);
-}
+
+

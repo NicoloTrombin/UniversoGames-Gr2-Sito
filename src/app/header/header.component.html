@@ -24,7 +24,7 @@
                 <div id="burg2" class="burger"></div>
             </label>
             <ul class="content_nav">
-                <li [ngClass]="{'underline' : (selectedPath == '' || selectedPath == 'dettaglio-news') }"><a routerLink="/">HOME</a></li>
+                <li [ngClass]="{'underline' : (selectedPath == '' || selectedPath == 'dettaglio-news' || selectedPath == 'lista-news') }"><a routerLink="/">NEWS</a></li>
                 <li [ngClass]="{'underline' : (selectedPath == 'reviews')  }"><a routerLink="/reviews">REVIEWS</a></li>
                 <li [ngClass]="{'underline' : (selectedPath == 'catalogo') }"><a routerLink="/catalogo">CATALOGO</a></li>
             </ul>
