@@ -1,6 +1,5 @@
 <div>
   <html lang="it" data-theme="light">
-
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./lista-videogiochi.component.css">
@@ -10,21 +9,10 @@
   <main class="main" >
     <section *ngFor="let v of listaVideogiochi$ | async" class="card">
       <figure class="figure">
-        <img class="image" src="{{ v.coverImage }}" alt="" [routerLink]= "['/dettaglio', v._id]">
+        <img class="image" src="{{ v.coverImage }}" alt="coverImage">
       </figure>
       <div class="description">
         <div class="my-bg-color"></div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <br>
         <br>
         <br>
@@ -47,16 +35,16 @@
             </figure>
             <figure class="detail">
               <img class="star_image" src="https://raw.githubusercontent.com/NaveenPantra/card_ui_interaction/master/multiplayer.png" alt="">
-              <figcaption class="detail_text">Multiplayer: <br> fino a {{ v.numberOfPlayers }} giocatore/i</figcaption>
+              <figcaption class="detail_text">Fino a {{ v.numberOfPlayers }} giocatore/i</figcaption>
             </figure>
-
           </div>
         </div>
-        <div class="play_info">
+
+        <!-- <div class="play_info">
           <p>Piattaforma: {{ v.category }}</p>
           <p>Publisher: {{ v.publisher }}</p>
           <p>Svilupppato da {{ v.softwareHouse }}</p>
-        </div>
+        </div> -->
       </div>
     </section>
   </main>
