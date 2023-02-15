@@ -69,6 +69,7 @@
     background-color: #545a72;
     z-index: -1;
     opacity: 0.7;
+    border-radius: 3%;
   }
   
   button {
@@ -98,7 +99,6 @@
     height: 30rem;
     position: relative;
     box-shadow: 0 2rem 6rem var(rgba(0, 0, 0, 0.3));
-    border-radius: 5px;
     transition: all var(--transition-time-1) var(--transition-ease-1);
     color: white;
   }
@@ -106,6 +106,7 @@
   .card:hover {
     transform: scale(var(--scale-1));
     z-index: var(--z-index-999);
+    border-radius: 3%;
   }
   
   .figure {
@@ -120,12 +121,19 @@
   
   .card:hover .figure {
     transform: translateY(-7.7rem) scale(var(--scale-ineverse-1));
+    cursor: pointer;
   }
   
   .image {
     height: 80%;
     width: 80%;
+    background-size: cover;
     object-fit: cover;
+    border-radius: 3%;
+  }
+
+  .image:hover {
+    border-radius: 3%;
   }
   
   .description {
@@ -161,6 +169,7 @@
     align-items: center;
     justify-content: center;
     background: var(--color-bg-1);
+    border-radius: 3%;
   }
   
   .star_image {
