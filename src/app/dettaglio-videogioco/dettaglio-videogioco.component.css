@@ -27,7 +27,7 @@
 
 .image img{
     height: 34rem;
-    border-radius: 3%;
+    object-fit: cover;
 }
 
 .videogioco-header h2 {
@@ -68,8 +68,8 @@
 }
 
 .contenuto .sviluppatore-publisher {
-    display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin-left: 2.3rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
