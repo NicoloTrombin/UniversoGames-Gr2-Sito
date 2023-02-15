@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit{
       .pipe(filter((e) => e instanceof RoutesRecognized))
       .subscribe((val: any) => {
         this.selectedPath = val.urlAfterRedirects.split('/')[1];;
+        console.log(this.selectedPath);
       });
   }
 
