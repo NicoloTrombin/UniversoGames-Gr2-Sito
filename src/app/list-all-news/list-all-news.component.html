@@ -1,1 +1,38 @@
-<p>list-all-news works!</p>
+<section id="category-news">
+    <h1 class="section-header">
+      <a href="#">
+        Notizie Recenti
+      </a>
+    </h1>
+    <div class="category-header">
+      <div class="category-btn">
+        <button>Categoria</button>
+        <button>Categoria</button>
+        <button>Categoria</button>
+      </div>
+      <div class="search-box">
+        <button class="btn-search"><i class="fas fa-search"></i></button>
+        <input type="text" class="input-search" placeholder="Cerca...">
+      </div>
+    </div>
+    
+  <div class="latest-news-container">
+    <article class="latest-news-item" *ngFor="let lN of (listaNew$ | async)?.slice(6)?.reverse()?.slice(0,7) as listNews"
+             [routerLink]="['dettaglio-news', lN._id]">
+      <img src="{{ lN.imageUrl }}" alt="Games Image">
+      <h4>
+        <a>
+        {{ lN.title }}
+        </a>
+      </h4>
+      <div class="writer">
+        <a href="#">{{ lN.authorName }}</a>
+        <span> . 52 secondi fa</span>
+      </div>
+    </article>
+    <div class="other-news">
+      <button routerLink="/lista-news" id="other-news-button">Tutte le news</button>
+    </div>
+  </div>
+</section>
+
