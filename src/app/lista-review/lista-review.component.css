@@ -43,7 +43,15 @@
 }
 
 #game {
+    color: #fff;
+    height: 3rem;
+    font-size: 1.1rem;
     font-weight: 500;
+    background-color: darkslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
 }
 
 .discover{

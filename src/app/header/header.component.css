@@ -144,4 +144,20 @@ input[type=checkbox]:checked ~ .label #burg2{
     .content_nav li{
         padding: 15px 0px;
     }
+
+    .underline {
+        font-weight: 900;
+    }
+    
+    .underline::after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        height: 2px;
+        width: 12%;
+        background-color: #fff;
+        transition: transform ease-in-out 0.5s;
+    }
 }
