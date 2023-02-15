@@ -13,6 +13,9 @@
     width: 100%;
     height: 100%;
     background-image: url(./assets/BackgroundImage9.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     z-index: -999;
 }
 

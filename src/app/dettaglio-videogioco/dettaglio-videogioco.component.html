@@ -1,19 +1,36 @@
-
-<div *ngIf="(listaVideogiochi$ | async) as listV" class="game">
-   <p class="title">DETTAGLIO GIOCO</p>
+<div class="wrapper">
+ <div *ngIf="(listaVideogiochi$ | async) as listV" class="game">
+   <h1 class="title">DETTAGLI DEL GIOCO</h1>
    <br>
    <br>
-   <p> <img [src]="listV.coverImage" alt="image"> </p>
+   
+   <div class="image" >
+        <img [src]="listV.coverImage" alt="image">
+   </div>
+   <br>
+   <p class="back" [routerLink]="['/catalogo']">Clicca qui per tornare indietro</p>
+   <br>
    <p>Titolo: {{ listV.title }}</p>
+   <br>
    <p>Piattaforma: {{ listV.category }}</p>
+   <br>
    <p>Data di Uscita: {{ listV.releaseDate }}</p>
+   <br>
    <p>Genere: {{ listV.genre }}</p>
+   <br>
    <p>Sviluppatore: {{ listV.softwareHouse }}</p>
+   <br>
    <p>Publisher: {{ listV.publisher }}</p>
+   <br>
    <p>Numero massimo di giocatori: {{ listV.numberOfPlayers }}</p>
+   <br>
    <p>
-    Audio: {{ listV.languages.voice }} <br>
+    Audio: {{ listV.languages.voice }} 
+    <br>
+    <br>
+    <br>
     Sottotitoli: {{ listV.languages.text }}
    </p>
     
+</div>  
 </div>
