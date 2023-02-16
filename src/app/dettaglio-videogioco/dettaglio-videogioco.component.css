@@ -13,7 +13,7 @@
     color: white;
     font-weight: bold;
     background-color: rgba(55, 55, 55, 0.5);
-    padding-bottom: 5rem; 
+    padding-bottom: 2rem; 
 }
 
 .game h1 {
@@ -26,7 +26,9 @@
 }
 
 .image img{
-max-width: 550px;
+    max-width: 550px;
+    width: 550px;
+    height: 410px;
     object-fit: cover;
 }
 
@@ -44,16 +46,16 @@ max-width: 550px;
 
 .back{
    font-style: italic; 
-   font-size: 17px;
+   font-size: .75rem;
    color: lightgrey;
    text-decoration: underline;
    cursor: pointer;
    text-align: center;
-   margin-bottom: 2rem;
 }
 
 .contenuto {
-    font-size: 19px;
+    padding-top: 3rem;
+    font-size: 1rem;
 }
 
 .genere-piattaforma p i{
@@ -67,18 +69,12 @@ max-width: 550px;
     margin-bottom: .5rem;
 }
 
-.contenuto .sviluppatore-publisher {
-    justify-content: center;
-    margin-left: 2.3rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
 .lista {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     text-align: center;
+    gap: .8rem;
 }
 
 .lista .audio-sottotitoli {
