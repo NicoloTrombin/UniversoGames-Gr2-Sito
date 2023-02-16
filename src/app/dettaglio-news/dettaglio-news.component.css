@@ -56,15 +56,6 @@ figure img{
     padding: 5px 25px 5px 25px;
     background-color: #fafafa;
   }
-
-  /* .outside {
-    position: absolute;
-    max-width: 100%;
-    max-height: 100%;
-    background-color: #fafafa;
-    opacity: .6;
-    z-index: -1;
-} */
   
   .news-details {
     font-size: 0.75em;
