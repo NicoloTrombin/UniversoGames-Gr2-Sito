@@ -1,6 +1,11 @@
 <article *ngIf="(listaNew$ | async) as listN">
     <div class="news-header">
-      <h1>{{ listN.title }}</h1>
+      <h1>
+        <button class="back-arrow-btn" routerLink="/lista-news">
+          <i class='bx bx-arrow-back' id="back-arrow"></i>
+        </button> 
+        {{ listN.title }}
+      </h1>
       <figure>
       <img src="{{ listN.imageUrl }}" alt="New-Image" />
       </figure>

@@ -94,6 +94,7 @@ button:focus {
     border-radius: 40px;
     padding :4px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 .random-btn:hover {
     border: solid 2px transparent;

@@ -1,6 +1,9 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { FormControl } from '@angular/forms';
+import { map, Observable } from 'rxjs';
+import { Categoria } from '../model/categoria';
 import { New } from '../model/news';
+import { CategorieService } from '../service/categorie.service';
 import { NewsService } from '../service/news.service';
 
 @Component({
@@ -11,6 +14,15 @@ import { NewsService } from '../service/news.service';
 export class ListAllNewsComponent implements OnInit{
 
   listaNew$ !: Observable<New[]>;
+
+  keyRicerca = '';
+  categorie = new FormControl('');
+
+  btnXbox = false;
+  btnPs3 = false;
+  btnPs4 = false;
+  btnPs5 = false;
+  btnGameCube = false;
 
   constructor(private newsService: NewsService) {}
 
@@ -29,8 +41,6 @@ export class ListAllNewsComponent implements OnInit{
       document.body.scrollTop ||
       0;
 
-    console.log('[scroll]', scrollPosition);
-
     if (scrollPosition >= this.topPosToStartShowing) {
       this.isShow = true;
     } else {
@@ -44,6 +54,41 @@ export class ListAllNewsComponent implements OnInit{
       left: 0,
       behavior: 'smooth',
     });
+  }
+
+  // Ricerca
+  ricerca() {
+    this.listaNew$ = this.newsService.ricercaKey(this.keyRicerca);
+    this.filtaPer(this.listaNew$)
+  }
+
+  filtaPer(list: Observable<New[]>) {
+    let categories : string[] = [];
+    if(this.btnXbox) {
+      categories.push('XBOX')
+    }
+    if(this.btnPs3) {
+      categories.push('PS3')
+    }
+    if(this.btnPs4) {
+      categories.push('PS4')
+    }
+    if(this.btnPs5) {
+      categories.push('PS5')
+    }
+    if(this.btnGameCube) {
+      categories.push('Game Cube')
+    }
+
+    if(categories.length == 0 ) {
+        return;
+    }
+
+    this.listaNew$ = this.newsService.filtraCategorie(categories, list);
+  }
+
+  refreshNews() {
+    this.listaNew$ = this.newsService.getNews();
   }
 
 
