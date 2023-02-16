@@ -6,6 +6,7 @@
         <button [ngClass]="{'colorBtn' : btnPs4}" (click)="btnPs4 = !btnPs4; ricerca()" >PS4</button>
         <button [ngClass]="{'colorBtn' : btnPs5}" (click)="btnPs5 = !btnPs5; ricerca()" >PS5</button>
         <button [ngClass]="{'colorBtn' : btnGameCube}" (click)="btnGameCube = !btnGameCube; ricerca()">Game Cube</button>
+        <i (click)="refreshNews()" id="reloading-icon" class="fa fa-refresh" aria-hidden="true"></i>
       </div>
       <div class="search-box">
         <button (click)="ricerca()" class="btn-search"><i class="fas fa-search"></i></button>

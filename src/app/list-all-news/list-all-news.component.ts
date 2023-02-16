@@ -87,6 +87,9 @@ export class ListAllNewsComponent implements OnInit{
     this.listaNew$ = this.newsService.filtraCategorie(categories, list);
   }
 
+  refreshNews() {
+    this.listaNew$ = this.newsService.getNews();
+  }
 
 
 }

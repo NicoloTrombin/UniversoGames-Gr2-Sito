@@ -79,3 +79,15 @@ figure img{
   .news-details time {
     color: #666;
   }
+
+  #back-arrow {
+    font-size: 1.3rem;
+    padding-right: 1rem;
+    color: #fff;
+  }
+
+  .back-arrow-btn {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+  }
