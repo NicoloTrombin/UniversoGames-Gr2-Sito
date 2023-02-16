@@ -21,6 +21,7 @@ img {
     max-width: 940px;
     margin: 20px auto;
     padding-top: 7rem;
+    cursor: pointer;
 }
 
 .home-hero {
@@ -273,6 +274,7 @@ a.spam-button:link {
     color: #fff;
     background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
     box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
 }
 
 .other-news #other-news-button:hover {
@@ -376,6 +378,7 @@ a.spam-button:link {
     position: relative;
     flex-basis: 31%;
     background-color: #fff;
+    cursor: pointer;
 }
 
 #recent-games .box .badge {
@@ -422,7 +425,8 @@ a.spam-button:link {
     cursor: pointer;
     border-radius: 3px;
     border-color: transparent;
-    transition: all .4s
+    transition: all .4s;
+    cursor: pointer;
   }
   
   .back-to-top .fa {

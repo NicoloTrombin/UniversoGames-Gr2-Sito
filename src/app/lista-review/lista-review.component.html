@@ -10,6 +10,7 @@
             <p id="game">{{ l.reviewedGame.name }}</p>
               <div class="imagecontainer">
                   <img src="{{ l.imageUrls }}" id="person-img" alt="photo" height="70px" width="70px">
+                  <p id="name">{{ l.reviewerName }}</p>
               </div>
               <!-- Stars -->
               <div class="stars"
@@ -18,7 +19,7 @@
               </div>
               <!-- Content -->
               <h4 id="title">{{ l.title }}</h4>
-              <p id="name">{{ l.reviewerName }}</p>
+              <!-- <p id="name">{{ l.reviewerName }}</p> -->
               <p id="date">{{ l.publicationDate }}</p>
               <p id="info">{{ l.content }}</p>
               <button  [routerLink]="['/dettaglio', l.reviewedGame.id]" class="random-btn">Scopri di più!</button>
