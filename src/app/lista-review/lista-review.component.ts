@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Review } from '../model/review';
 import { ReviewsService } from '../service/reviews.service';
 import { Observable } from 'rxjs';
@@ -15,5 +15,33 @@ export class ListaReviewComponent implements OnInit {
 
   ngOnInit(): void {
     this.listaReview$ = this.reviewsService.getReviews();
+  }
+
+  isShow: boolean = false;
+  topPosToStartShowing = 100;
+
+  @HostListener('window:scroll')
+  checkScroll() {
+    const scrollPosition =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+
+    console.log('[scroll]', scrollPosition);
+
+    if (scrollPosition >= this.topPosToStartShowing) {
+      this.isShow = true;
+    } else {
+      this.isShow = false;
+    }
+  }
+
+  gotoTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
   }
 }

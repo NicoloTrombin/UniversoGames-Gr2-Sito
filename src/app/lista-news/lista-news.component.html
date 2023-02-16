@@ -43,7 +43,7 @@
         Notizie Recenti
       </a>
     </h1>
-    <div class="category-header">
+    <!-- <div class="category-header">
       <div class="category-btn">
         <button>Categoria</button>
         <button>Categoria</button>
@@ -53,7 +53,7 @@
         <button class="btn-search"><i class="fas fa-search"></i></button>
         <input type="text" class="input-search" placeholder="Cerca...">
       </div>
-    </div>
+    </div> -->
     
   <div class="latest-news-container">
     <article class="latest-news-item" *ngFor="let lN of (listaNew$ | async)?.slice(6)?.reverse()?.slice(0,7) as listNews"
@@ -148,12 +148,12 @@
           </div>
       </div>
 
-      <div class="box" [routerLink]="['dettaglio', listV[3]._id]">
-          <span class="badge racing">{{ listV[3].genre }}</span>
-          <img src="{{ listV[3].coverImage }}" />
+      <div class="box" [routerLink]="['dettaglio', listV[0]._id]">
+          <span class="badge racing">{{ listV[0].genre }}</span>
+          <img src="{{ listV[0].coverImage }}" />
           <div class="box-lower-section">
-              <h4>{{ listV[3].title }}</h4>
-              <p>{{ listV[3].softwareHouse }} - {{ listV[3].category }}</p>
+              <h4>{{ listV[0].title }}</h4>
+              <p>{{ listV[0].softwareHouse }} - {{ listV[0].category }}</p>
               <a class="comments">3 Commenti</a>
           </div>
       </div>
@@ -169,3 +169,5 @@
       </div>
   </div>
 </section>
+
+<button *ngIf="isShow" class="back-to-top" id="back-to-top" (click)="gotoTop()"><i class='fa fa-chevron-up'></i></button>

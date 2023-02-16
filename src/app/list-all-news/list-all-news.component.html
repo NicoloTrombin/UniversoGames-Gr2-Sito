@@ -14,12 +14,13 @@
   <div class="latest-news-container">
     <article class="latest-news-item" *ngFor="let lN of listaNew$ | async"
              [routerLink]="['/dettaglio-news', lN._id]">
-      <img src="{{ lN.imageUrl }}" alt="Games Image">
-      <h4>
-        <a>
-        {{ lN.title }}
-        </a>
-      </h4>
+      <div class="image-title-news">
+          <img src="{{ lN.imageUrl }}" alt="Games Image">
+          <h4>
+          <a>{{ lN.title }}</a>
+          </h4>
+      </div>
+     
       <div class="writer">
         <a href="#">{{ lN.authorName }}</a>
         <span> . 52 secondi fa</span>
@@ -27,4 +28,6 @@
     </article>
   </div>
 </section>
+
+<button *ngIf="isShow" class="back-to-top" id="back-to-top" (click)="gotoTop()"><i class='fa fa-chevron-up'></i></button>
 
