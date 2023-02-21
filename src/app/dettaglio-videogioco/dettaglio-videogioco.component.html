@@ -1,31 +1,32 @@
-<div class="wrapper">
- <div *ngIf="(listaVideogiochi$ | async) as listV" class="game">
-   <!-- <h1>DETTAGLI DEL GIOCO</h1> -->
-   <div class="videogioco-header">
-     <h2>{{ listV.title }}</h2>
-     <div class="image" >
-        <img [src]="listV.coverImage" alt="image">
+<article *ngIf="(listaVideogiochi$ | async) as listV">
+  <div class="news-header">
+    <h1>
+      <button class="back-arrow-btn" routerLink="/catalogo">
+        <i class='bx bx-arrow-back' id="back-arrow"></i>
+      </button> 
+      {{ listV.title }}
+    </h1>
+    <figure>
+    <img src="{{ listV.coverImage }}" alt="New-Image" />
+    </figure>
+    <figcaption>
+      <p>Numero giocatori: {{ listV.numberOfPlayers }}</p> 
+      <p>Piattaforma: {{ listV.category }}</p>
+    </figcaption>
+    
+  </div>
+  <div class="content">
+    <!-- <div class="outside"></div> -->
+    <div class="news-details">
+        <span class="byline" >Di 
+        <a>{{ listV.publisher }}</a></span>
+        <time>{{ listV.releaseDate }}</time>
+        <!-- <span class="tags">{{ listN.tags }}</span> -->
+    </div>
+  
+      <div class="details-content">
+        <p><i class='bx bxs-user-voice'></i>{{ listV.languages.voice }}</p>
+        <p><i class='bx bx-text'></i>{{ listV.languages.text }}</p>
       </div>
-   </div>
-   
-   <div class="contenuto">
-     <div class="genere-piattaforma">
-          <p><i class='bx bx-category'></i>{{ listV.genre }}</p>
-          <p><i class='bx bx-joystick' ></i> {{ listV.category }}</p>
-     </div>
-     <div class="lista">
-          <p>Sviluppatore: {{ listV.softwareHouse }}</p>
-          <p>Publisher: {{ listV.publisher }}</p>
-          <p>Numero massimo di giocatori: {{ listV.numberOfPlayers }}</p>
-          <div class="audio-sottotitoli">
-               <p><i class='bx bx-podcast'></i>{{ listV.languages.voice }}</p>
-               <p><i class='bx bx-captions'></i>{{ listV.languages.text }}</p>   
-          </div>
-     </div>
-     <p class="data-uscita">Data di Uscita: {{ listV.releaseDate }}</p>   
-   </div>
-   <br>
-   <p class="back" [routerLink]="['/catalogo']">Clicca qui per tornare indietro</p>
-
- </div>  
-</div>
+  </div>
+</article>

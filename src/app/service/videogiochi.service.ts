@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Videogioco, Linguaggio } from '../model/videogiochi';
 import { HttpClient } from '@angular/common/http';
 
@@ -9,23 +9,71 @@ export class VideogiochiService{
 
     constructor(private http: HttpClient) {}
 
-    getVideogiochi(): Observable<Videogioco[]> {
-        return this.http.get<Videogioco[]>(this.apiUrl);
+    listaVideogiochi$ !: Observable<Videogioco[]>;
+
+    getVideogiochi() {
+       this.listaVideogiochi$ = this.http.get<Videogioco[]>(this.apiUrl);
+
+       return this.listaVideogiochi$;
     }
 
     getVideogioco(id: string): Observable<Videogioco> {
         return this.http.get<Videogioco>(this.apiUrl + '/' + id);
     }
 
-    addVideogioco(newVideogioco: Omit<Videogioco, 'id'>){
-        return this.http.post(this.apiUrl, newVideogioco);
-    }
+    ricercaKey(keyword: string) {
+        keyword = keyword.toLowerCase().trim();
+        const videogiochiTrovati = this.listaVideogiochi$.pipe(
+          map((data) => {
+            return data.filter((v: Videogioco) => {
+              return (
+                v.title.toLowerCase().includes(keyword) ||
+                v.category.toLowerCase().includes(keyword) ||
+                v.publisher.toLowerCase().includes(keyword) ||
+                v.softwareHouse.toLowerCase().includes(keyword) ||
+                v.genre.toLocaleLowerCase().includes(keyword)
+              );
+            });
+          })
+        );
+        return videogiochiTrovati;
+      }
 
-    deleteVideogioco(id: string){
-        return this.http.delete(this.apiUrl + '/' + id);
-    }
+      filtraCategorie(
+        categorieSelezionate: string[] | string,
+        gioco$: Observable<Videogioco[]>
+      ) {
+        const videogiochiTrovati = gioco$.pipe(
+          map((data) => {
+            return data.filter((v: Videogioco) => {
+              let trovato = false;
+              if (typeof categorieSelezionate != 'string') {
+                categorieSelezionate.forEach((element) => {
+                  if (v.category.toLowerCase().includes(element.toLowerCase())) {
+                    trovato = true;
+                  }
+                });
+              }
+              return trovato;
+            });
+          })
+        );
+    
+        let vuoto = false;
+        videogiochiTrovati
+          .pipe(
+            map((data) => {
+              if (data.length < 1) {
+                vuoto = true;
+              }
+            })
+          )
+          .subscribe();
+    
+        if (vuoto) {
+          return gioco$;
+        }
+        return videogiochiTrovati;
+      }
 
-    updateVideogioco(videogioco: Videogioco){
-        return this.http.put(this.apiUrl, videogioco);
-    }
 }

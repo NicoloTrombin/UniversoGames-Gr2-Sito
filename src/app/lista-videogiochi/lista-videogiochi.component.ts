@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { Videogioco, Linguaggio } from '../model/videogiochi';
 import { VideogiochiService } from '../service/videogiochi.service';
 import { Observable } from 'rxjs';
+import { FormControl } from '@angular/forms';
 
 
 @Component({
@@ -12,6 +13,14 @@ import { Observable } from 'rxjs';
 export class ListaVideogiochiComponent {
 
   listaVideogiochi$!: Observable<Videogioco[]>;
+  keyRicerca = '';
+  categorie = new FormControl('');
+
+  btnXbox = false;
+  btnPs3 = false;
+  btnPs4 = false;
+  btnPs5 = false;
+  btnPC = false;
 
   constructor(private videogiochiService: VideogiochiService) {}
 
@@ -46,5 +55,40 @@ export class ListaVideogiochiComponent {
       left: 0,
       behavior: 'smooth',
     });
+  }
+
+  // Ricerca
+  ricerca() {
+    this.listaVideogiochi$ = this.videogiochiService.ricercaKey(this.keyRicerca);
+    this.filtaPer(this.listaVideogiochi$)
+  }
+
+  filtaPer(list: Observable<Videogioco[]>) {
+    let categories : string[] = [];
+    if(this.btnXbox) {
+      categories.push('XBOX')
+    }
+    if(this.btnPs3) {
+      categories.push('PS3')
+    }
+    if(this.btnPs4) {
+      categories.push('PS4')
+    }
+    if(this.btnPs5) {
+      categories.push('PS5')
+    }
+    if(this.btnPC) {
+      categories.push('PC')
+    }
+
+    if(categories.length == 0 ) {
+        return;
+    }
+
+    this.listaVideogiochi$ = this.videogiochiService.filtraCategorie(categories, list);
+  }
+
+  refreshNews() {
+    this.listaVideogiochi$ = this.videogiochiService.getVideogiochi();
   }
 }

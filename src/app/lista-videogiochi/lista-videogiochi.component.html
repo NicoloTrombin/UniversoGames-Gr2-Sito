@@ -6,8 +6,25 @@
 </head>
 
 <body>
+  <div class="category-header">
+    <div class="category-btn">
+      <button [ngClass]="{'colorBtn' : btnXbox}" (click)="btnXbox = !btnXbox; ricerca()" >XBOX</button>
+      <button [ngClass]="{'colorBtn' : btnPs3}"  (click)="btnPs3 = !btnPs3; ricerca()" >PS3</button>
+      <button [ngClass]="{'colorBtn' : btnPs4}" (click)="btnPs4 = !btnPs4; ricerca()" >PS4</button>
+      <button [ngClass]="{'colorBtn' : btnPs5}" (click)="btnPs5 = !btnPs5; ricerca()" >PS5</button>
+      <button [ngClass]="{'colorBtn' : btnPC}" (click)="btnPC = !btnPC; ricerca()">PC</button>
+      <i (click)="refreshNews()" id="reloading-icon" class="fa fa-refresh" aria-hidden="true"></i>
+    </div>
+    <div class="search-box">
+      <button (click)="ricerca()" class="btn-search"><i class="fas fa-search"></i></button>
+      <input type="text" class="input-search" placeholder="Cerca..." [(ngModel)]="keyRicerca"> 
+    </div>
+  </div>
+
   <main class="main" >
     <section *ngFor="let v of listaVideogiochi$ | async" class="card">
+
+
       <figure class="figure" [routerLink]="['/dettaglio',v.id]">
         <img class="image" src="{{ v.coverImage }}" alt="coverImage">
       </figure>
@@ -40,11 +57,6 @@
           </div>
         </div>
 
-        <!-- <div class="play_info">
-          <p>Piattaforma: {{ v.category }}</p>
-          <p>Publisher: {{ v.publisher }}</p>
-          <p>Svilupppato da {{ v.softwareHouse }}</p>
-        </div> -->
       </div>
     </section>
   </main>
