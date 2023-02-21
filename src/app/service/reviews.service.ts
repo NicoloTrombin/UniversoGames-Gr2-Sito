@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ReviewsService {
-  private apiUrl = 'https://project-works-rest-api.onrender.com/api/v1/GROUP-II/review';
+  private apiUrl = 'http://localhost:3000/reviews';
 
   constructor(private http: HttpClient) {}
 

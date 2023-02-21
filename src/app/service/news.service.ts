@@ -6,7 +6,7 @@ import { New } from "../model/news";
 @Injectable ({providedIn: 'root'})
 export class NewsService {
 
-    private apiUrl = 'https://project-works-rest-api.onrender.com/api/v1/GROUP-II/news';
+    private apiUrl = ' http://localhost:3000/news';
 
     constructor(private http: HttpClient) {}
 

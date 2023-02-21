@@ -1,7 +1,7 @@
 /*news*/
 
 export interface New {
-    _id: string;
+    id: string;
     title: string;
     category: string;
     imageUrl: string;

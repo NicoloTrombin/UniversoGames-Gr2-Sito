@@ -4,4 +4,4 @@ export interface Categoria{
     name: string;
 }
 
-export type NewCategoria = Omit<Categoria, '_id'>;
+export type NewCategoria = Omit<Categoria, 'id'>;

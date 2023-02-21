@@ -16,7 +16,7 @@
     
   <div class="latest-news-container">
     <article class="latest-news-item" *ngFor="let lN of listaNew$ | async"
-             [routerLink]="['/dettaglio-news', lN._id]">
+             [routerLink]="['/dettaglio-news', lN.id]">
       <div class="image-title-news">
           <img src="{{ lN.imageUrl }}" alt="Games Image">
           <h4>

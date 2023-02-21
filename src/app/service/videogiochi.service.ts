@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable({ providedIn: 'root' })
 export class VideogiochiService{
-    private apiUrl = 'https://project-works-rest-api.onrender.com/api/v1/GROUP-II/videogame';
+    private apiUrl = 'http://localhost:3000/videogames';
 
     constructor(private http: HttpClient) {}
 

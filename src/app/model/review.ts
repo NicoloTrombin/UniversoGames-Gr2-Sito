@@ -1,5 +1,5 @@
 export interface Review {
-    _id: string;
+    id: string;
     title: string;
     publicationDate: string;
     content: string;
@@ -14,4 +14,4 @@ export interface ReviewedGame {
     name: string;
 }
 
-export type NewReview = Omit<Review, '_id'>;
+export type NewReview = Omit<Review, 'id'>;

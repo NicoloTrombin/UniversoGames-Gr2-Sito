@@ -8,7 +8,7 @@
 <body>
   <main class="main" >
     <section *ngFor="let v of listaVideogiochi$ | async" class="card">
-      <figure class="figure" [routerLink]="['/dettaglio',v._id]">
+      <figure class="figure" [routerLink]="['/dettaglio',v.id]">
         <img class="image" src="{{ v.coverImage }}" alt="coverImage">
       </figure>
       <div class="description">

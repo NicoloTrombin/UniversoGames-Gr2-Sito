@@ -1,6 +1,6 @@
 /*Videogioco*/
 export interface Videogioco {
-    _id: string;
+    id: string;
     title: string;
     category: string;
     releaseDate: string;

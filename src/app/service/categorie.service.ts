@@ -5,7 +5,7 @@ import { Categoria } from "../model/categoria";
 @Injectable ({providedIn: 'root'})
 export class CategorieService {
 
-    private apiUrl = 'https://project-works-rest-api.onrender.com/api/v1/GROUP-II/category';
+    private apiUrl = 'http://localhost:3000/categories';
 
     constructor(private http: HttpClient) {}
 
